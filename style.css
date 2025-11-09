@@ -1,0 +1,44 @@
+/* External CSS (applies globally; can be overridden by internal/inline) */
+
+:root {
+  --radius: 1rem;
+  --shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* Base */
+body {
+  line-height: 1.7;
+}
+
+/* Example: Post meta line */
+.author-name {
+  font-variation-settings: "wght" 600;
+}
+
+/* Comment card + controls (EXTERNAL focus) */
+.comment-card {
+  border: 1px solid #e9ecef;
+  border-radius: calc(var(--radius) + 0.25rem);
+}
+
+/* Inputs */
+.comment-card .form-control {
+  border-radius: 0.75rem;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.comment-card .form-control:focus {
+  border-color: #86b7fe;            /* Bootstrap-like focus color */
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.15);
+  outline: 0;
+}
+
+/* Comment items */
+.comment-item {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Images */
+img { display: block; max-width: 100%; height: auto; }
